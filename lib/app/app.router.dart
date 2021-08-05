@@ -9,12 +9,12 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
-import '../main.dart';
+import '../authentification/presentation/authentification_view.dart';
 
 class Routes {
-  static const String myHomePage = '/';
+  static const String authentificationView = '/';
   static const all = <String>{
-    myHomePage,
+    authentificationView,
   };
 }
 
@@ -22,14 +22,14 @@ class StackedRouter extends RouterBase {
   @override
   List<RouteDef> get routes => _routes;
   final _routes = <RouteDef>[
-    RouteDef(Routes.myHomePage, page: MyHomePage),
+    RouteDef(Routes.authentificationView, page: AuthentificationView),
   ];
   @override
   Map<Type, StackedRouteFactory> get pagesMap => _pagesMap;
   final _pagesMap = <Type, StackedRouteFactory>{
-    MyHomePage: (data) {
+    AuthentificationView: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const MyHomePage(),
+        builder: (context) => const AuthentificationView(),
         settings: data,
       );
     },
