@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter_template/app/app.router.dart';
 import 'package:flutter_starter_template/authentification/domain/usecases/login.dart';
 import 'package:flutter_starter_template/error/failures.dart';
 import 'package:flutter_starter_template/util/input_validator.dart';
@@ -200,7 +201,9 @@ class LoginFormState extends State<LoginForm> {
                               description:
                                   'It seems you are not connected to any network! Make sure you are connected to a network and try again!');
                         }
-                      }, (success) => null);
+                      },
+                          (success) => _navigationService
+                              .replaceWith(Routes.myHomePage));
                     }
                   },
                   style: ButtonStyle(

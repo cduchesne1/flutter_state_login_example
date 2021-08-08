@@ -1,8 +1,12 @@
+import 'package:flutter_starter_template/home/presentation/home_view.dart';
 import 'package:stacked/stacked_annotations.dart';
 
 import '../authentification/presentation/authentification_view.dart';
 
-@StackedApp(routes: [MaterialRoute(page: AuthentificationView, initial: true)])
+@StackedApp(routes: [
+  MaterialRoute(page: AuthentificationView, initial: true),
+  MaterialRoute(page: MyHomePage)
+])
 class AppSetup {
   /** Serves no purpose besides having an annotation attached to it */
 }
