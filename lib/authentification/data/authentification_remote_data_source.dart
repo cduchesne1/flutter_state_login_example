@@ -14,6 +14,8 @@ class AuthentificationRemoteDataSourceImpl
     final expectedEmail = 'test@email.com';
     final expectedPassword = 'password';
 
+    Future.delayed(const Duration(milliseconds: 50));
+
     if (email == expectedEmail && password == expectedPassword) {
       return true;
     } else {
