@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
-import '../domain/authentification_repository.dart';
+
 import '../../error/exceptions.dart';
 import '../../error/failures.dart';
 import '../../network/network_info.dart';
-
+import '../domain/authentification_repository.dart';
 import 'authentification_remote_data_source.dart';
 
 

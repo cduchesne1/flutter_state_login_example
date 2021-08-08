@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter_template/app/colors.dart';
+import '../../app/colors.dart';
 
 class AuthentificationView extends StatelessWidget {
   const AuthentificationView({Key? key}) : super(key: key);
