@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter_template/app/app.router.dart';
-import 'package:flutter_starter_template/authentification/domain/usecases/login.dart';
-import 'package:flutter_starter_template/error/failures.dart';
-import 'package:flutter_starter_template/util/input_validator.dart';
 import 'package:stacked_services/stacked_services.dart';
+
+import '../../app/app.router.dart';
 import '../../app/colors.dart';
+import '../../error/failures.dart';
 import '../../injection_container.dart';
+import '../../util/input_validator.dart';
+import '../domain/usecases/login.dart';
 
 class AuthentificationView extends StatelessWidget {
   const AuthentificationView({Key? key}) : super(key: key);
@@ -41,14 +42,15 @@ class AuthentificationView extends StatelessWidget {
                         isScrollable: true,
                         indicatorColor: AppColors.blue,
                         labelPadding:
-                            EdgeInsets.only(left: 0, right: _width * (8 / 414)),
+                            EdgeInsets.only(right: _width * (8 / 414)),
                         labelColor: AppColors.blue,
                         unselectedLabelColor: AppColors.grey,
+                        // ignore: prefer_const_literals_to_create_immutables
                         tabs: [
-                          Tab(
+                          const Tab(
                             text: 'Login',
                           ),
-                          Tab(
+                          const Tab(
                             text: 'Register',
                           )
                         ]),
@@ -301,7 +303,7 @@ class RegisterFormState extends State<RegisterForm> {
             constraints: BoxConstraints.tightFor(
                 width: _width, height: _height * (60 / 896)),
             child: ElevatedButton(
-                onPressed: () => null,
+                onPressed: () => {},
                 style: ButtonStyle(
                     foregroundColor:
                         MaterialStateProperty.all<Color>(Colors.white),

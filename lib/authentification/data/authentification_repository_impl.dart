@@ -6,7 +6,6 @@ import '../../network/network_info.dart';
 import '../domain/authentification_repository.dart';
 import 'authentification_remote_data_source.dart';
 
-
 class AuthentificationRepositoryImpl implements AuthentificationRepository {
   final AuthentificationRemoteDataSource remoteDataSource;
   final NetworkInfo networkInfo;
@@ -15,8 +14,7 @@ class AuthentificationRepositoryImpl implements AuthentificationRepository {
       {required this.remoteDataSource, required this.networkInfo});
 
   @override
-  Future<Either<Failure, bool>> login(
-      String email, String password) async {
+  Future<Either<Failure, bool>> login(String email, String password) async {
     if (await networkInfo.isConnected) {
       try {
         return Right(await remoteDataSource.login(email, password));

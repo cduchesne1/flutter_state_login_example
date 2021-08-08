@@ -1,7 +1,7 @@
-import 'package:flutter_starter_template/home/presentation/home_view.dart';
 import 'package:stacked/stacked_annotations.dart';
 
 import '../authentification/presentation/authentification_view.dart';
+import '../home/presentation/home_view.dart';
 
 @StackedApp(routes: [
   MaterialRoute(page: AuthentificationView, initial: true),
