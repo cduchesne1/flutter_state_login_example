@@ -82,10 +82,10 @@ class LoginForm extends StatefulWidget {
   const LoginForm({Key? key, required this.context}) : super(key: key);
 
   @override
-  LoginFormState createState() => LoginFormState();
+  _LoginFormState createState() => _LoginFormState();
 }
 
-class LoginFormState extends State<LoginForm> {
+class _LoginFormState extends State<LoginForm> {
   final GlobalKey<FormState> formKey = GlobalKey();
   final NavigationService _navigationService = sl<NavigationService>();
   final DialogService _dialogService = sl<DialogService>();
@@ -248,10 +248,10 @@ class RegisterForm extends StatefulWidget {
   const RegisterForm({Key? key, required this.context}) : super(key: key);
 
   @override
-  RegisterFormState createState() => RegisterFormState();
+  _RegisterFormState createState() => _RegisterFormState();
 }
 
-class RegisterFormState extends State<RegisterForm> {
+class _RegisterFormState extends State<RegisterForm> {
   @override
   Widget build(BuildContext context) {
     final double _height = MediaQuery.of(widget.context).size.height;
